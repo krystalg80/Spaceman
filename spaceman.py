@@ -1,10 +1,10 @@
 import random
 
-custom_words = ["apple"]
+custom_words = ["apple", "banana", "orange", "grape", "kiwi", "pear", "melon", "lemon", "berry", "peach"]
 
 def load_word():
 
-    secret_word = random.choice(custom_words)
+    secret_word = random.choice(custom_words).lower()
 
     print("Selected word:", secret_word)  # Add this line for debugging
 
@@ -38,11 +38,9 @@ def get_guessed_word(secret_word, letters_guessed):
     for letter in secret_word:
         if letter in letters_guessed:
             guessed_word += letter
-        else:
             guessed_word += '_'
     return guessed_word
 
-    pass
 
 
 def is_guess_in_word(guess, secret_word):
